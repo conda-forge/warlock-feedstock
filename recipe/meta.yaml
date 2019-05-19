@@ -1,7 +1,7 @@
 {% set name = "warlock" %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "d7403f728fce67ee2f22f3d7fa09c9de0bc95c3e7bcf6005b9c1962b77976a06" %}
+{% set hash_val = "1f412b1425b74ccc859d7b88eb1316928a7efbf5368eab9058a949c981dc99bc" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
