@@ -18,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
 
   run:
-    - python
+    - python >=3.6
     - jsonschema >=0.7,<4
     - jsonpatch >=0.10,<2
     - six
