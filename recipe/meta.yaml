@@ -38,6 +38,7 @@ test:
 about:
   home: http://github.com/bcwaldon/warlock
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: 'Python object model built on JSON schema and JSON patch.'
 
