@@ -30,6 +30,10 @@ requirements:
 test:
   imports:
     - warlock
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://github.com/bcwaldon/warlock
