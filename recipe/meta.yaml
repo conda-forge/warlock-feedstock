@@ -12,17 +12,17 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
 
   run:
-    - python
+    - python >=3.6
     - jsonschema >=0.7,<4
     - jsonpatch >=0.10,<2
     - six
@@ -30,15 +30,19 @@ requirements:
 test:
   imports:
     - warlock
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://github.com/bcwaldon/warlock
-  license: Apache 2.0
+  license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: 'Python object model built on JSON schema and JSON patch.'
 
 extra:
   recipe-maintainers:
     - anguslees
-    - pmlandwehr
     - tschoonj
