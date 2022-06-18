@@ -18,14 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools
+    - python >=3.7
+    - poetry
 
   run:
-    - python >=3.6
-    - jsonschema >=0.7,<4
-    - jsonpatch >=0.10,<2
-    - six
+    - python >=3.7
+    - jsonschema >=4
+    - jsonpatch >=1,<2
 
 test:
   imports:
