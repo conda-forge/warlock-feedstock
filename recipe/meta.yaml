@@ -12,17 +12,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - poetry
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - jsonschema >=4
     - jsonpatch >=1,<2
 
@@ -31,6 +31,7 @@ test:
     - warlock
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
