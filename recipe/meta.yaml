@@ -1,5 +1,5 @@
 {% set name = "warlock" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name }}
@@ -8,18 +8,18 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 99abbf9525b2a77f2cde896d3a9f18a5b4590db063db65e08207694d2e0137fc
+  sha256: 82319ba017341e7fcdc81efc2be9dd2f8237a0da07c71476b5425651b317b1c9
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - poetry
+    - flit-core
 
   run:
     - python >={{ python_min }}
