@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - poetry
+    - flit-core
 
   run:
     - python >={{ python_min }}
